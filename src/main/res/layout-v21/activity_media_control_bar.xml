@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="50dp"
+    xmlns:card_view="http://schemas.android.com/tools"
+    card_view:cardUseCompatPadding="true"
+    app:cardElevation="20dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottom_now_playing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#E4E5E8">
+
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="20dp"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/mediacontrollerimage"
+                android:layout_centerVertical="true"
+                android:id="@+id/bottom_now_playing_album_art"/>
+
+            <TextView
+                android:layout_toLeftOf="@id/linearlayout"
+                android:layout_toRightOf="@id/bottom_now_playing_album_art"
+                android:id="@+id/bottom_now_playing_song_name"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="marquee"
+                android:text="Song Title"/>
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:id="@+id/bottom_now_playing_song_play"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_playbutton"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="#000000"
+                    android:visibility="gone"
+                    />
+
+                <Button
+                    android:id="@+id/bottom_now_playing_song_pause"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_pausebutton"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="#000000" />
+
+
+                <Button
+                    android:id="@+id/bottom_now_playing_song_clear"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/ic_clear"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="#000000" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <ProgressBar
+            android:id="@+id/bottom_now_playing_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_gravity="bottom"
+            android:progressTint="@color/white"
+            android:progressBackgroundTint="@android:color/transparent"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
